@@ -1,0 +1,30 @@
+{
+  "name": "100DaysOfX",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon ./bin/www",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "config/*",
+      "client/*"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-jwt": "^5.3.0",
+    "jade": "~1.11.0",
+    "jwks-rsa": "^1.2.1",
+    "mongoose": "^4.11.7",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.11.0",
+    "serve-favicon": "~2.4.5"
+  }
+}

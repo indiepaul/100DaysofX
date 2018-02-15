@@ -1,0 +1,8 @@
+
+.Logs {
+  max-height: 60vh;
+  overflow: auto;
+}
+.Log.list-group{
+  margin-bottom: 0px;
+}
